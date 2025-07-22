@@ -1,0 +1,47 @@
+// src/styles/global.scss
+
+@import './variables';
+@import './breakpoints';
+
+// 全局 CSS 重置和基础样式
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: $desktop-font-size; // 默认桌面端大小
+  color: $color-text-dark;
+  background-color: $color-background-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// 移动端
+@media (max-width: $breakpoint-mobile-max) {
+  html, body {
+    font-size: $mobile-font-size;
+  }
+}
+// 平板
+@media (min-width: $breakpoint-tablet-min) {
+  html, body {
+    font-size: $tablet-font-size;
+  }
+}
+// 桌面
+@media (min-width: $breakpoint-desktop-min) {
+  html, body {
+    font-size: $desktop-font-size;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+// 链接基础样式
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

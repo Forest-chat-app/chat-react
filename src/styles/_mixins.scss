@@ -1,0 +1,27 @@
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin min-max-width($min, $max){
+    min-width: $min;
+    max-width: $max;
+    width: clamp($min, width, $max);
+}
+@mixin min-max-height($min, $max){
+    min-height: $min;
+    max-height: $max;
+    height: clamp($min, height, $max);
+}

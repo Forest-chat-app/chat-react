@@ -1,0 +1,70 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+@import '@/styles/_breakpoints.scss';
+
+.error-message {
+  font-size: $font-size-sm;
+  color: white;
+  background-color: $color-error;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-base;
+  z-index: 10;
+  position: absolute;
+  
+  // 创建小三角形
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+
+// 顶部错误消息
+.error-top {
+  top: -$spacing-xl;
+  right: $spacing-md;
+  
+  &:after {
+    bottom: -5px;
+    right: 10px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $color-error;
+  }
+}
+
+// 底部错误消息
+.error-bottom {
+  bottom: -$spacing-xl;
+  left: calc(15vw + #{$spacing-md});
+  // 移动端
+  @media (max-width: $breakpoint-mobile-max) {
+    left: calc(45vw + #{$spacing-md});
+  }
+  &:after {
+    top: -5px;
+    left: 5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $color-error;
+  }
+}
+
+// 右侧错误消息
+.error-right {
+  top: 0;
+  right: -$spacing-3xl;
+  min-width: 100px;
+  // 移动端
+  @media (max-width: $breakpoint-mobile-max) {
+    right: -$spacing-sm;
+  }
+  &:after {
+    left: -5px;
+    top: 10px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid $color-error;
+  }
+} 

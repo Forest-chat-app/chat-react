@@ -1,0 +1,51 @@
+// src/styles/_variables.scss
+
+// --- 颜色变量 ---
+$color-primary: #237fe0d8;          // 主要品牌色
+$color-secondary: #6c757d;        // 次要颜色
+$color-success: #28a745;          // 成功提示色
+$color-error: #dc3545;           // 错误/危险提示色
+$color-warning: #ffc107;          // 警告提示色
+$color-info: #17a2b8;             // 信息提示色
+
+$color-text-dark: #343a40;        // 深色文字
+$color-text-light: #f8f9fa;       // 浅色文字
+$color-background-light: #f8f9fa; // 浅色背景
+$color-background-dark: #343a40;  // 深色背景 (如果未来有深色模式)
+
+$color-card-bg: #ffffff;          // 卡片背景色
+$color-border: #dee2e6;           // 边框色
+$color-shadow: rgba(0, 0, 0, 0.1); // 阴影颜色
+$color-link: #0056b3;             // 链接颜色
+
+// --- 字体大小变量 ---
+$mobile-font-size: 14px;          // 移动端字体大小
+$tablet-font-size: 15px;         // 平板端字体大小
+$desktop-font-size: 16px;         // 桌面端字体大小
+$font-size-base: 1rem;             // 基础字体大小 (16px)
+$font-size-sm: 0.875rem;           // 小号字体
+$font-size-md: 1rem;               // 中号字体
+$font-size-lg: 1.25rem;            // 大号字体
+$font-size-h1: 2.5rem;             // H1 标题
+$font-size-h2: 2rem;               // H2 标题
+
+// --- 间距变量 ---
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+$spacing-2xl: 2.5rem; // 40px
+$spacing-3xl: 3rem; // 48px
+
+// --- 圆角变量 ---
+$border-radius-base: 0.3rem;
+$border-radius-lg: 0.5rem;
+
+// --- 阴影变量 ---
+$box-shadow-base: 0 0.25rem 0.75rem $color-shadow;
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+
+// --- 其他常用变量 ---
+$transition-speed-base: 0.3s;
+$transition-ease: ease;

@@ -1,0 +1,46 @@
+@import '@/styles/_mixins.scss';
+@import '@/styles/_variables.scss';
+@import '@/styles/_breakpoints.scss';
+
+.auth-container{
+    width: 100%;
+    height: 100%;
+    @include flex-center;
+
+    .auth-card{
+        @include flex-column-center;
+        background-color: $color-card-bg;
+        width: 30vw;
+        height: 50vh;
+        @include min-max-width(200px, 500px);
+        @include min-max-height(300px, 500px);
+        border-radius: $border-radius-lg;
+        box-shadow: $box-shadow-base;
+    
+        // 移动端显示
+        @media (max-width: $breakpoint-mobile-max) {
+            width: 85vw;
+            height: 50vh;
+        }
+        
+        h2{
+            font-size: $font-size-h2;
+        }
+    
+        form{
+            width: 100%;
+        }
+    
+        .toggle-mode{
+            font-size: $font-size-sm;
+            color: $color-text-dark;
+            span{
+                cursor: pointer;
+                color: $color-primary;
+            }
+        }
+        
+    }
+}
+
+    
