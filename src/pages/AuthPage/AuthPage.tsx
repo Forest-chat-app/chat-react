@@ -1,10 +1,20 @@
+import React, { useState } from 'react';
 import './AuthPage.scss';
-import { useState } from 'react';
 import Input from '@/components/Input/Input';
 import Button from '@/components/Button/Button';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+
+// 定义表单数据类型
+interface LoginFormData {
+  username: string;
+  password: string;
+}
+
+interface RegisterFormData extends LoginFormData {
+  confirmPassword: string;
+}
 
 // 登录表单验证规则
 const loginSchema = yup.object({
@@ -29,7 +39,7 @@ const registerSchema = yup.object({
     .oneOf([yup.ref('password')], '两次密码输入不一致')
 });
 
-function AuthPage() {
+const AuthPage: React.FC = () => {
     const [isLogin, setIsLogin] = useState(true);
     
     // 登录表单
@@ -37,7 +47,7 @@ function AuthPage() {
       register: registerLogin, 
       handleSubmit: handleLoginSubmit, 
       formState: { errors: loginErrors } 
-    } = useForm({
+    } = useForm<LoginFormData>({
         resolver: yupResolver(loginSchema),
         mode: 'onChange'
     });
@@ -47,19 +57,19 @@ function AuthPage() {
       register: registerSignup, 
       handleSubmit: handleSignupSubmit, 
       formState: { errors: signupErrors } 
-    } = useForm({
+    } = useForm<RegisterFormData>({
         resolver: yupResolver(registerSchema),
         mode: 'onChange'
     });
     
     // 登录提交处理
-    const onLoginSubmit = (data) => {
+    const onLoginSubmit = (data: LoginFormData) => {
         console.log('登录表单提交:', data);
         // 调用登录API
     };
     
     // 注册提交处理
-    const onSignupSubmit = (data) => {
+    const onSignupSubmit = (data: RegisterFormData) => {
         console.log('注册表单提交:', data);
         // 调用注册API
     };

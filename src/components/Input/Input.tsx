@@ -1,5 +1,5 @@
 import './Input.scss';
-import React, { forwardRef, InputHTMLAttributes } from 'react';
+import { forwardRef, InputHTMLAttributes } from 'react';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 // 定义组件的Props接口，扩展标准input属性

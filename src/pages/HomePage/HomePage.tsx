@@ -1,5 +1,8 @@
 import './HomePage.scss';
-function HomePage() {
+import React from 'react';
+
+
+const HomePage: React.FC = () => {
     return (
         <div className="home-page">
             <h1>Home</h1>

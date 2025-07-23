@@ -18,7 +18,7 @@ export default defineConfig({
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
   server: {
-    port: 8888,
+    port: 8889,
     open: true,
     host: true,
   }
